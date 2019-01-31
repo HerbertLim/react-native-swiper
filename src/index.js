@@ -11,9 +11,11 @@ import ReactNative, {
   Dimensions,
   TouchableOpacity,
   ViewPagerAndroid,
-  Platform
+  Platform,
+  ViewPropTypes,
 } from 'react-native'
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 // Using bare setTimeout, setInterval, setImmediate
 // and requestAnimationFrame calls is very dangerous
@@ -100,7 +102,7 @@ let styles = StyleSheet.create({
 
 // missing `module.exports = exports['default'];` with babel6
 // export default React.createClass({
-module.exports = React.createClass({
+module.exports = createReactClass({
 
   /**
    * Props Validation
@@ -109,7 +111,7 @@ module.exports = React.createClass({
   propTypes: {
     horizontal                       : PropTypes.bool,
     children                         : PropTypes.node.isRequired,
-    style                            : View.propTypes.style,
+    style                            : ViewPropTypes.style,
     pagingEnabled                    : PropTypes.bool,
     showsHorizontalScrollIndicator   : PropTypes.bool,
     showsVerticalScrollIndicator     : PropTypes.bool,
