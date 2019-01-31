@@ -1,3 +1,8 @@
+This fork includes modifications of some depreacted features:
+- PropTypes
+- View.propTypes
+- React.createClass
+
 # react-native-swiper
 
 [![npm version](http://img.shields.io/npm/v/react-native-swiper.svg?style=flat-square)](https://npmjs.org/package/react-native-swiper "View this project on npm")
